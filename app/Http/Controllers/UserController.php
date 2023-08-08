@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
@@ -11,8 +13,9 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view("users.index");
+    {   
+        $users = User::paginate('10');
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -61,7 +64,9 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -69,7 +74,9 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::findOrFail($id)
+
+        
     }
 
     /**

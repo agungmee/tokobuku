@@ -13,6 +13,8 @@
 
 <form class="form-group" enctype="multipart/form-data" action="{{route('users.update', [$user->id])}}" method="POST">
     @csrf
+
+    <input type="hidden" value="PUT" name="_method">
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" placeholder="Full Name" name="name" value="{{$user->name}}" id="name">
@@ -47,7 +49,7 @@
     <div class="form-group">
         <label for="phone">Phone Number</label>
         <br>
-        <input type="text" name="phone" class="form-control" value="{{$user->phone}}" disabled>
+        <input type="text" name="phone" class="form-control" value="{{$user->phone}}">
         <br>
     </div>
     <div class="form-group">

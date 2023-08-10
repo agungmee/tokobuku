@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tokobuku | @yield("title")</title>
     <link rel="stylesheet" href="{{asset('polished/polished.min.css')}}">
-    <link rel="stylesheet" href="{{asset('polished/iconic/css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.2/esm/ionicons.min.js">
 
     <style>
         .grid-highlight {
@@ -67,8 +67,10 @@
             <div class="polished-sidebar bg-light col-12 col-md-3 col-lg-2 p-0 collapse d-md-inline" id="sidebar-nav">
                 <ul class="polished-sidebar-menu ml-0 pt-4 p-0 d-md-block">
                     <input class="border-dark form-control d-block d-md-none mb-4" type="text" placeholder="Search" aria-label="Search" />
-                        <li><a href="/home"><span class="oi oi-home"></span>Home</a></li>
-                        <li><a href="/users"><span class="oi oi-people"></span>Users</a></li>
+                        <li><a href="/home"><span><ion-icon name="home-outline"></ion-icon></span>Home</a></li>
+                        <li><a href="/users"><span><ion-icon name="people-outline"></ion-icon></span>Users</a></li>
+                        <li><a href="/categories"><span><ion-icon name="grid-outline"></ion-icon></span>Categories</a></li>
+                        <li><a href="/categories"><span><ion-icon name="book-outline"></ion-icon></span>Book</a></li>
                     <li>
                 </li>
             </div>
@@ -92,6 +94,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 </html>

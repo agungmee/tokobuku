@@ -10,6 +10,7 @@
                 <input type="text" name="keyword" class="form-control col-md-10" placeholder="Filter Berdasarkan Email" value="{{Request::get('keyword')}}">
             </div>
             <div class="col-md-6">
+                
                 <input {{Request::get('status') == "ACTIVE" ? "checked" : ""}} value="ACTIVE" name="status" type="radio" class="form-control" id="active">
                 <label for="active">Active</label>
                 <input {{Request::get('status') == "INACTIVE" ? "checked" : ""}} value="INACTIVE" name="status" type="radio" class="form-control" id="inactive">
